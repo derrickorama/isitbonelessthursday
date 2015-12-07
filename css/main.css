@@ -1,0 +1,227 @@
+body {
+	text-align: center;
+	font-family: 'Cantarell', sans-serif;
+}
+
+h1, h2 {
+	font: normal 1.5em "Luckiest Guy", "Trebuchet MS", sans-serif;
+}
+
+h1 {
+	position: relative;
+	z-index: 1;
+	margin: 0;
+	padding: .7em .5em .4em;
+	background: #FFD200;
+	text-shadow: 0 0 2px #5e4e03;
+	box-shadow: 0 1px 5px #baa353;
+}
+
+* {
+	-webkit-transition: all 1s ease-in;
+	-moz-transition: all 1s ease-in;
+	transition: all 1s ease-in;
+}
+
+figure a, figure img, .map {
+	position: relative;
+	z-index: 1;
+}
+
+.caption {
+	padding: .2em .5em;
+	font-size: .9em;
+	font-style: italic;
+	-moz-transform: translateY(-100px);
+	-webkit-transform: translateY(-100px);
+	transform: translateY(-100px);
+}
+
+.caption.show {
+	-moz-transform: translateY(0);
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.buffalo {
+	padding: 0 1.5em;
+}
+
+.buffalo img {
+	max-width: 500px;
+	width: 100%;
+	box-shadow: 0 0 15px #000;
+}
+
+.answer {
+	position: relative;
+	padding: .5em 0 .2em;
+	font-size: 1.1em;
+	font-weight: normal;
+	-moz-transform: scale(1);
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+
+.answer em {
+	font-size: 1.3em;
+	font-style: normal;
+}
+
+.no-js .answer {
+	-moz-transform: scale(20);
+	-webkit-transform: scale(20);
+	transform: scale(20);
+	opacity: 0;
+}
+
+.map {
+	height: 250px;
+	max-width: 800px;
+	width: 90%;
+	box-shadow: 0 0 15px #000;
+}
+
+.map.not-loaded {
+	height: 0;
+}
+
+.find-bwws {
+	position: absolute;
+	left: -1000%;
+}
+
+.no-geo .find-bwws {
+	position: static;
+}
+
+.allow {
+	margin: 0 1.5em;
+}
+
+.no-geo .allow {
+	display: none;
+}
+
+.buffalo-jump {
+	position: absolute;
+	left: -1000%;
+}
+
+.not-thursday .buffalo-jump {
+	position: static;
+}
+
+/*
+| Find a BWWs anyway
+*/
+
+.find-a-bwws-anyway {
+	border: 1px solid #baa353;
+	border-radius: 5px;
+	display: block;
+	margin: 1.5em auto;
+	max-width: 280px;
+	padding: .5em;
+	text-decoration: none;
+	text-shadow: 1px 1px #baa353;
+	color: #000;
+	background: #FFD200; /* Old browsers */
+	background: -moz-linear-gradient(top,  #FFD200 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFD200), color-stop(50%,#fccd4d), color-stop(51%,#f8b500), color-stop(100%,#fbdf93)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #FFD200 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #FFD200 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #FFD200 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #FFD200 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFD200', endColorstr='#fbdf93',GradientType=0 ); /* IE6-9 */
+
+	/* Turn off transition */
+	-webkit-transition: all .1s ease-in;
+	-moz-transition: all .1s ease-in;
+	transition: all .1s ease-in;
+}
+
+.find-a-bwws-anyway:hover, .find-a-bwws-anyway:focus, .find-a-bwws-anyway:active {
+	background: #FFD200; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffde4c 0%, #fccd4d 50%, #f4b922 51%, #fce9b8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffde4c), color-stop(50%,#fccd4d), color-stop(51%,#f4b922), color-stop(100%,#fce9b8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffde4c 0%,#fccd4d 50%,#f4b922 51%,#fce9b8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffde4c 0%,#fccd4d 50%,#f4b922 51%,#fce9b8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffde4c 0%,#fccd4d 50%,#f4b922 51%,#fce9b8 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffde4c 0%,#fccd4d 50%,#f4b922 51%,#fce9b8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffde4c', endColorstr='#fce9b8',GradientType=0 ); /* IE6-9 */
+}
+
+.find-a-bwws-anyway:active {
+	-webkit-transform: scale(.98);
+	-moz-transform: scale(.98);
+	transform: scale(.98);
+}
+
+/*
+| About
+*/
+
+.about {
+	padding: 1em .5em 1em;
+	font-size: .8em;
+	color: #666;
+}
+
+.about a {
+	display: block;
+}
+
+@media (min-width: 600px) {
+	h1 {
+		font-size: 2em;
+	}
+
+	.caption {
+		font-size: 1em;
+	}
+
+	.answer {
+		padding: .2em 0;
+		font-size: 1.5em;
+	}
+
+	.map {
+		height: 400px;
+	}
+
+	.about a {
+		display: inline;
+	}
+}
+
+@media (min-width: 850px) {
+	.map {
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 920px) {
+	h1 {
+		font-size: 3em;
+	}
+
+	.answer {
+		padding: .5em 0 .3em;
+		font-size: 2em;
+	}
+
+	.map {
+		height: 600px;
+	}
+}
+
+/*h1 {
+	font-size: 4em;	
+}
+
+
+
+
+*/
